@@ -4,4 +4,14 @@
   <div *ngFor="let i of clickLog" >
     <p [ngStyle]="{backgroundColor : 'blue'}" ngClass="white" *ngIf="i > 4">index of click - {{i}}</p>
   </div>
+
+  <!-- anwer -->
+  <hr>
+  <button class="btn btn-primary" (click)="onToggle()"> Display Details </button>
+  <p *ngIf="showSecret">Secret Password = Tuna</p>
+  <div *ngFor="let item of log"
+  [ngStyle]="{backgroundColor : item > 4 ? 'blue' : 'white'}"
+  [ngClass]="{'white' : item > 5}"
+  >{{ item }}</div>
+
 </div>

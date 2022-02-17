@@ -15,6 +15,13 @@ export class AppComponent {
     this.numOfClicks++;
     this.clickLog.push(this.numOfClicks);
     console.log(this.clickLog);
-    
+  }
+
+  // anwer
+  showSecret = false;
+  log = []
+  onToggle(){
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }
