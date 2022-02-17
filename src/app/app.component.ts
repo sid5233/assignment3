@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'assignment3';
+  showPara = false;
+  clickLog = [];
+  numOfClicks = 0;
+  showParagraph(){
+    this.showPara = true;
+    this.numOfClicks++;
+    this.clickLog.push(this.numOfClicks);
+    console.log(this.clickLog);
+    
+  }
 }
